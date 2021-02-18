@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class Counter extends Component {
   state = {
     value: this.props.value,
+    id: this.props.id,
     tags: ["tag1", "tag2", "tag3"],
   };
 
@@ -20,7 +21,7 @@ class Counter extends Component {
           onClick={this.handleIncremet}
           className="btn btn-primary btn-sm"
         >
-          Increment {this.props.id}
+          Increment {this.state.id}
         </button>
         <ul>{this.renderTags()}</ul>
       </div>
