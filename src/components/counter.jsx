@@ -4,7 +4,6 @@ class Counter extends Component {
   state = {
     value: this.props.value,
     id: this.props.id,
-    tags: ["tag1", "tag2", "tag3"],
   };
 
   constructor(props) {
@@ -23,7 +22,7 @@ class Counter extends Component {
         >
           Increment {this.state.id}
         </button>
-        <ul>{this.renderTags()}</ul>
+        <button className="btn btn-danger ml-2 btn-sm">Delete</button>
       </div>
     );
   }
